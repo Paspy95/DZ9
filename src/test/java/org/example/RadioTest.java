@@ -33,6 +33,7 @@ public class RadioTest {
     @Test
     public void setNextChanel() {
         Radio radio = new Radio();
+        int radioChanel = 10;
         radio.setNextChannel();
 
         int expected = 0;
@@ -44,6 +45,7 @@ public class RadioTest {
     @Test
     public void setPreviousChannel() {
         Radio radio = new Radio();
+        int radioChannel=-1;
         radio.setPreviousChannel();
 
         int expected = 9;
@@ -55,7 +57,7 @@ public class RadioTest {
     @Test
     public void setIncreaseVolume() {
         Radio radio = new Radio();
-        radio.setIncreaseVolume(100);
+        radio.setIncreaseVolume(101);
         int expected = 0;
         int actual = radio.currentVolume;
 
@@ -65,7 +67,7 @@ public class RadioTest {
     @Test
     public void setReductionVolume() {
         Radio radio = new Radio();
-        radio.setReductionVolume(0);
+        radio.setReductionVolume(-1);
         int expected = 100;
         int actual = radio.currentVolume;
 

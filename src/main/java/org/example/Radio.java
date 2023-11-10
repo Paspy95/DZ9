@@ -21,7 +21,6 @@ public class Radio {
     }
 
     public void setPreviousChannel() {
-        radioChannel = 0;
         if (radioChannel <= 0) {
             radioChannel = radioChannel - 1;
             radioChannel = 9;
