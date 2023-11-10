@@ -42,7 +42,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNextChannel2(){
+    public void setNextChannel2() {
         Radio radio = new Radio();
         radio.setNextChannel(5);
 
@@ -83,6 +83,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void setIncreaseVolume2() {
         Radio radio = new Radio();
