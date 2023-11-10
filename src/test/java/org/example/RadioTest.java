@@ -31,44 +31,44 @@ public class RadioTest {
     }
 
     @Test
-    public void setNextChanel(){
-        Radio radio=new Radio();
+    public void setNextChanel() {
+        Radio radio = new Radio();
         radio.setNextChannel();
 
-        int expected=0;
-        int actual= radio.radioChannel;
+        int expected = 0;
+        int actual = radio.radioChannel;
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void setPreviousChannel(){
-        Radio radio=new Radio();
+    public void setPreviousChannel() {
+        Radio radio = new Radio();
         radio.setPreviousChannel();
 
-        int expected=9;
-        int actual= radio.radioChannel;
+        int expected = 9;
+        int actual = radio.radioChannel;
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void setIncreaseVolume(){
-        Radio radio= new Radio();
+    public void setIncreaseVolume() {
+        Radio radio = new Radio();
         radio.setIncreaseVolume(100);
-        int expected=0;
-        int actual=radio.currentVolume;
+        int expected = 0;
+        int actual = radio.currentVolume;
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void setReductionVolume(){
-        Radio radio= new Radio();
+    public void setReductionVolume() {
+        Radio radio = new Radio();
         radio.setReductionVolume(0);
-        int expected=100;
-        int actual=radio.currentVolume;
+        int expected = 100;
+        int actual = radio.currentVolume;
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 }
