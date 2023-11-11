@@ -3,45 +3,44 @@ package org.example;
 public class Radio {
     private int radioChannel;
     private int currentVolume;
-    private int maxChannel=9;
+    private int maxChannel = 9;
 
 
     public int getRadioChannel() {
         return radioChannel;
     }
+
     public void setRadioChannel(int radioChannel) {
-        if(radioChannel<0){
+        if (radioChannel < 0) {
             return;
         }
-        if (radioChannel>maxChannel){
+        if (radioChannel > maxChannel) {
             return;
         }
-        this.radioChannel=radioChannel;
+        this.radioChannel = radioChannel;
     }
 
-    public void nextChannel(){
-        if(radioChannel!=maxChannel){
+    public void nextChannel() {
+        if (radioChannel != maxChannel) {
             radioChannel++;
-        }
-        else {
-            radioChannel=0;
+        } else {
+            radioChannel = 0;
         }
     }
 
-    public void previousChannel(){
-        if(radioChannel!=0){
+    public void previousChannel() {
+        if (radioChannel != 0) {
             radioChannel--;
-        }
-        else {
-            radioChannel=maxChannel;
+        } else {
+            radioChannel = maxChannel;
         }
     }
 
     public void setCurrentVolume(int currentVolume) {
-        if(currentVolume<0){
+        if (currentVolume < 0) {
             return;
         }
-        if(currentVolume>100){
+        if (currentVolume > 100) {
             return;
         }
         this.currentVolume = currentVolume;
@@ -51,40 +50,37 @@ public class Radio {
         return currentVolume;
     }
 
-    public void nextVolume(){
-        if(currentVolume!=100){
+    public void nextVolume() {
+        if (currentVolume != 100) {
             currentVolume++;
-        }
-        else {
-            currentVolume=0;
+        } else {
+            currentVolume = 0;
         }
     }
 
-    public void previousVolume(){
-        if(currentVolume!=0){
+    public void previousVolume() {
+        if (currentVolume != 0) {
             currentVolume--;
-        }
-        else {
-            currentVolume=100;
+        } else {
+            currentVolume = 100;
         }
     }
 
-    public void setClientChannel(int clientChannel){
-        if(clientChannel<0){
+    public void setClientChannel(int clientChannel) {
+        if (clientChannel < 0) {
             return;
         }
-        if (clientChannel>30){
+        if (clientChannel > 30) {
             return;
         }
-        radioChannel=clientChannel;
+        radioChannel = clientChannel;
 
 
     }
-    public int getClientChannel(){
+
+    public int getClientChannel() {
         return radioChannel;
     }
-
-
 
 
 }
