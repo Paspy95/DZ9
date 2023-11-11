@@ -1,58 +1,90 @@
 package org.example;
 
 public class Radio {
-    public int radioChannel;
-    public int currentVolume;
+    private int radioChannel;
+    private int currentVolume;
+    private int maxChannel=9;
 
-    public void setRadioChannel(int newRadioChannel) {
-        radioChannel = newRadioChannel;
+
+    public int getRadioChannel() {
+        return radioChannel;
+    }
+    public void setRadioChannel(int radioChannel) {
+        if(radioChannel<0){
+            return;
+        }
+        if (radioChannel>maxChannel){
+            return;
+        }
+        this.radioChannel=radioChannel;
     }
 
-    public void setMaxChannel(int newSetMaxChannel) {
-        radioChannel = newSetMaxChannel;
-        radioChannel = 9;
-    }
-
-    public void setNextChannel(int newSetNextChannel) {
-        radioChannel = newSetNextChannel;
-        if (radioChannel < 9) {
-            radioChannel = radioChannel + 1;
-        } else {
-            radioChannel = 0;
+    public void nextChannel(){
+        if(radioChannel!=maxChannel){
+            radioChannel++;
+        }
+        else {
+            radioChannel=0;
         }
     }
 
-
-    public void setPreviousChannel(int newSetPreviousChannel) {
-        radioChannel = newSetPreviousChannel;
-        if (radioChannel > 0) {
-            radioChannel = radioChannel - 1;
-        } else {
-            radioChannel = 9;
+    public void previousChannel(){
+        if(radioChannel!=0){
+            radioChannel--;
+        }
+        else {
+            radioChannel=maxChannel;
         }
     }
 
-    public void setIncreaseVolume(int newSetIncreaseVolume) {
-        currentVolume = newSetIncreaseVolume;
-        if (currentVolume < 100) ;
-        {
-            currentVolume = currentVolume + 1;
+    public void setCurrentVolume(int currentVolume) {
+        if(currentVolume<0){
+            return;
         }
-        if (currentVolume > 100) {
-            currentVolume = 0;
+        if(currentVolume>100){
+            return;
+        }
+        this.currentVolume = currentVolume;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void nextVolume(){
+        if(currentVolume!=100){
+            currentVolume++;
+        }
+        else {
+            currentVolume=0;
         }
     }
 
-    public void setReductionVolume(int newSetReductionVolume) {
-        currentVolume = newSetReductionVolume;
-        if (currentVolume > 0) ;
-        {
-            currentVolume = currentVolume - 1;
+    public void previousVolume(){
+        if(currentVolume!=0){
+            currentVolume--;
         }
-        if (currentVolume < 0) {
-            currentVolume = 100;
+        else {
+            currentVolume=100;
         }
     }
+
+    public void setClientChannel(int clientChannel){
+        if(clientChannel<0){
+            return;
+        }
+        if (clientChannel>30){
+            return;
+        }
+        radioChannel=clientChannel;
+
+
+    }
+    public int getClientChannel(){
+        return radioChannel;
+    }
+
+
 
 
 }
