@@ -65,22 +65,4 @@ public class Radio {
             currentVolume = 100;
         }
     }
-
-    public void setClientChannel(int clientChannel) {
-        if (clientChannel < 0) {
-            return;
-        }
-        if (clientChannel > 30) {
-            return;
-        }
-        radioChannel = clientChannel;
-
-
-    }
-
-    public int getClientChannel() {
-        return radioChannel;
-    }
-
-
 }

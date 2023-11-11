@@ -173,41 +173,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-    public void setClientChannel() {
-        Radio radio = new Radio();
-        radio.setClientChannel(15);
-
-        int expected = 15;
-        int actual = radio.getClientChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setClientChannel2() {
-        Radio radio = new Radio();
-        radio.setClientChannel(-11);
-
-        int expected = 0;
-        int actual = radio.getClientChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setClientChannel3() {
-        Radio radio = new Radio();
-        radio.setClientChannel(44);
-
-        int expected = 0;
-        int actual = radio.getClientChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-
 }
 
 
