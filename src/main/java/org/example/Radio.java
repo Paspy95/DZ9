@@ -3,7 +3,15 @@ package org.example;
 public class Radio {
     private int radioChannel;
     private int currentVolume;
-    private int maxChannel = 9;
+    private int maxChannel;
+
+    public Radio() {
+        maxChannel = 9;
+    }
+
+    public Radio(int numberStation) {
+        this.maxChannel = numberStation - 1;
+    }
 
 
     public int getRadioChannel() {
@@ -54,7 +62,7 @@ public class Radio {
         if (currentVolume != 100) {
             currentVolume++;
         } else {
-            currentVolume = 0;
+            currentVolume = 100;
         }
     }
 
@@ -62,7 +70,7 @@ public class Radio {
         if (currentVolume != 0) {
             currentVolume--;
         } else {
-            currentVolume = 100;
+            currentVolume = 0;
         }
     }
 }
